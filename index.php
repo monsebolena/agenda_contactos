@@ -1,7 +1,7 @@
 <?php
-require_once("./config/database.php");
-use Formacom\Core\App;
+// Cargar el archivo de configuración
+require_once './core/App.php';
 
-$app=new App();
-
+// Iniciar la aplicación
+new \Formacom\Core\App();
 ?>
