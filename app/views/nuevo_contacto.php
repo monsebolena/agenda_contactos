@@ -23,6 +23,9 @@
         <label for="telefono">Teléfono:</label>
         <input type="text" name="telefono" id="telefono" required><br><br>
 
+        <label for="telefono">Dirección:</label>
+        <input type="text" name="direccion" id="direccion" required><br><br>
+
         <button type="submit">Guardar Contacto</button>
     </form>
 

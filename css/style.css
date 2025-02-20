@@ -1,170 +1,142 @@
-/* Estilos Generales */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: #f4f7fa;
     color: #333;
-    line-height: 1.6;
     padding: 20px;
+    font-size: 16px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #333;
-    margin-bottom: 15px;
+/* Header */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
 }
 
-/* Estilos para la lista de contactos */
-.contacto-lista {
-    width: 80%;
-    margin: 20px auto;
-    background-color: white;
+/* Form Styles */
+form {
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.contacto-lista table {
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+form button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Table Styles */
+table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.contacto-lista table th, .contacto-lista table td {
+th, td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-.contacto-lista table th {
-    background-color: #007bff;
-    color: white;
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
 }
 
-.contacto-lista a {
-    color: #007bff;
-    text-decoration: none;
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-.contacto-lista a:hover {
-    text-decoration: underline;
-}
-
-/* Estilo para los botones */
-button, .btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover, .btn:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos para el formulario de edición y creación de contactos */
-form {
-    width: 60%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-form input[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #28a745;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-    background-color: #218838;
-}
-
-/* Estilo para los enlaces */
 a {
+    color: #4CAF50;
     text-decoration: none;
-    color: #007bff;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-/* Mensajes de alerta */
-.alert {
-    padding: 10px;
-    background-color: #f8d7da;
-    color: #721c24;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-
-.alert.success {
-    background-color: #d4edda;
-    color: #155724;
-}
-
-.alert.info {
-    background-color: #cce5ff;
-    color: #004085;
-}
-
-.alert.warning {
-    background-color: #fff3cd;
-    color: #856404;
-}
-
-.alert .close-btn {
-    float: right;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* Estilo para la cabecera y el pie de página */
-header, footer {
-    background-color: #007bff;
-    color: white;
-    padding: 15px;
+/* Links and Error Messages */
+p {
     text-align: center;
-    border-radius: 4px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.1rem;
 }
 
-footer {
+p a {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    font-size: 1.1rem;
     margin-top: 20px;
 }
 
-/* Responsividad */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    .contacto-lista {
-        width: 90%;
+    h1 {
+        font-size: 2rem;
     }
 
     form {
-        width: 90%;
+        padding: 20px;
+    }
+
+    table {
+        font-size: 0.9rem;
     }
 }
+

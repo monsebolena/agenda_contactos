@@ -41,6 +41,7 @@ class ContactoController extends Controller {
                     $contacto->nombre = $_POST["nombre"];
                     $contacto->email = $_POST["email"];
                     $contacto->telefono = $_POST["telefono"];
+                    $contacto->direccion = $_POST["direccion"];
                     $contacto->save();  // Guarda los cambios
 
                     // Redirigir a la lista de contactos después de editar

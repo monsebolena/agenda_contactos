@@ -25,6 +25,10 @@
             <input type="text" id="telefono" name="telefono" value="<?= htmlspecialchars($data->telefono) ?>" required>
             <br><br>
 
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" value="<?= htmlspecialchars($data->direccion) ?>" required>
+            <br><br>
+
             <button type="submit">Guardar cambios</button>
         </form>
     <?php else: ?>
