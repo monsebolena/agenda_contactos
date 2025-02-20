@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Establecer la base de reescritura (solo si es necesario, si tu app está en subdirectorio)
+    # RewriteBase /subdirectorio/
+
+    # Si el recurso solicitado no existe como archivo ni como directorio, redirige a index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
+</IfModule>
